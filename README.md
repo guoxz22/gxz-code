@@ -2,6 +2,8 @@
 
 GXZ-code 是一个 **GLM 优先** 的本地终端 coding agent CLI。它参考 Claude Code 的本地终端工作方式，但实现是独立的；默认连接智谱 BigModel / GLM Coding Plan 端点，也可以连接 OpenAI 兼容或 Anthropic Messages 兼容的服务。
 
+![GXZ-code 运行示意图](docs/images/gxz-code-demo.png)
+
 ## 当前能力
 
 - 默认使用 `glm-5.1` 和 `https://open.bigmodel.cn/api/coding/paas/v4`。
