@@ -1,0 +1,55 @@
+{
+  "name": "gxz-code-vscode",
+  "displayName": "GXZ Code",
+  "description": "VS Code bridge for the GLM-first GXZ-code coding agent.",
+  "version": "0.1.0",
+  "publisher": "gxz",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:gxzCode.ask",
+    "onCommand:gxzCode.explainSelection",
+    "onCommand:gxzCode.reviewFile",
+    "onCommand:gxzCode.diagnostics",
+    "onCommand:gxzCode.codeAction"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "GXZ Code",
+      "properties": {
+        "gxzCode.bridgeUrl": {
+          "type": "string",
+          "default": "http://127.0.0.1:37818",
+          "description": "GXZ-code local bridge URL."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "gxzCode.ask",
+        "title": "GXZ Code: Ask"
+      },
+      {
+        "command": "gxzCode.explainSelection",
+        "title": "GXZ Code: Explain Selection"
+      },
+      {
+        "command": "gxzCode.reviewFile",
+        "title": "GXZ Code: Review Current File"
+      },
+      {
+        "command": "gxzCode.diagnostics",
+        "title": "GXZ Code: Run Diagnostics"
+      },
+      {
+        "command": "gxzCode.codeAction",
+        "title": "GXZ Code: Run Code Action"
+      }
+    ]
+  }
+}

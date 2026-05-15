@@ -1,0 +1,31 @@
+{
+  "name": "gxz-code",
+  "version": "0.1.0",
+  "description": "GLM-first coding agent CLI with OpenAI and Anthropic compatible provider support.",
+  "type": "module",
+  "bin": {
+    "gxz-code": "dist/src/cli.js",
+    "gxz": "dist/src/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "docs"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "smoke": "npm run build && node dist/src/cli.js --help && node dist/src/cli.js config --show"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  }
+}
